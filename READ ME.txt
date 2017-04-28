@@ -1,0 +1,15 @@
+Pour pouvoir lancer le code ci joint, il faut avant tout installer tensorflow. Je conseille de passer par Anaconda qui
+ permet de plus facilement de créer un environnement et d'installer dedans les différentes librairie (TensorFlow, nltk 
+etc).
+
+Il faut conserver la position des données dans le dossier Data.. Sinon il faut changer le chemin d'accès dans train.py et
+ indiquer où sont les fichiers NEG POS etc.
+
+Il faut commencer par lancer train.py en renseignant le dossier désiré directement dans le code. L'appel est simplement :
+python train.py .
+Pour la 10-fold validation, il faut indiquer lors de l'appel dans le terminal le 10ième qui doit servir pour l'évaluation :
+python train.py --10eme="i" avec i valant de 0 à 9.
+Pour l'evaluation, il faut indiquer lors de l'appel le dossier avec les checkpoints, le vocabulaire etc; l'appel est :
+eval.py --checkpoint_dir="/dossier" .
+
+
